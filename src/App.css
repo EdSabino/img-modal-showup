@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  width: 100%;
+  height: 100vh;
   display: flex;
+}
+
+.App {
+  width: 50%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(./logo192.png);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Board {
+  margin: 7%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.Row {
+  height: 6.66666666667%;
+  width: 100%;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Col {
+  height: 100%;
+  width: 20%;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  height: 80%;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
   }
 }
