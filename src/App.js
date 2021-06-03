@@ -43,7 +43,7 @@ function App() {
         Aluna: Isadora T. Peres<br/>
         Professor: Henrique Telles Neto<br/>
         I período, Design - UNOCHAPECÓ<br/>
-        Linha do tempo usando como inspiração o jogo de tabuleiro snakes and ladders<br/>
+        Linha do tempo usando como inspiração<br/> o jogo de tabuleiro snakes and ladders<br/>
       </div>
       <div className="Board">
         { rows() }
