@@ -5,9 +5,9 @@ body {
 }
 
 #root {
-  width: 100%;
-  height: 470vh;
-  padding: 10px;
+  width: 100vw;
+  height: 300vh;
+  padding: 40px;
   overflow-x: hidden;
   display: flex;
 }
@@ -20,7 +20,7 @@ body {
   background-image: url(./imgs/tabs.png);
   display: flex;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .Board {
