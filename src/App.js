@@ -38,6 +38,13 @@ function App() {
 
   return (
     <div className="App">
+      <div className="Signature">
+        Componente curricular: História da Arte<br/>
+        Aluna: Isadora T. Peres<br/>
+        Professor: Henrique Telles Neto<br/>
+        I período, Design - UNOCHAPECÓ<br/>
+        Linha do tempo usando como inspiração o jogo de tabuleiro snakes and ladders<br/>
+      </div>
       <div className="Board">
         { rows() }
       </div>
