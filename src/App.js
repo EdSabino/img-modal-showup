@@ -1,5 +1,4 @@
 import './App.css';
-import img from './asd.png';
 import React, { useState } from 'react';
 
 function App() {
@@ -7,15 +6,24 @@ function App() {
   const [open, setOpen] = useState(false);
 
   const openImage = (item) => {
-    setImage(item);
+    import(`./imgs/${item + 1}.png`).then(image => {
+      setImage(image.default);
+    });
     setOpen(true);
   }
 
   const squares = (line) => {
     const vec = [];
-    for (let i =0; i < 5; i++) {
-      const item = 75 - ((line * 5) + (5 - i));
-      vec.push(<div className="Col" onClick={() => openImage(item)} ></div>)
+    if (line % 2 === 0) {
+      for (let i = 0; i < 5; i++) {
+        const item = 75 - ((line * 5) + (5 - i));
+        vec.push(<div className="Col" onClick={() => openImage(item)} ></div>)
+      }
+    } else {
+      for (let i = 5; i > 0; i--) {
+        const item = 75 - ((line * 5) + (5 - i)) - 1;
+        vec.push(<div className="Col" onClick={() => openImage(item)} ></div>)
+      }      
     }
     return vec
   }
@@ -33,8 +41,8 @@ function App() {
       <div className="Board">
         { rows() }
       </div>
-      <div className={open ? "modal open" : "modal"} onClick={() => setOpen(false)}>
-        <img src={img} alt="test" className="modal-content" id="img01" />
+      <div className={open ? "modal open" : "modal"} onClick={() => { setOpen(false); setImage(null) }}>
+        <img src={image} alt="test" className="modal-content" id="img01" />
       </div>
     </div>
   );
