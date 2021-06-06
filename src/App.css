@@ -10,14 +10,14 @@ body {
 
 #root {
   width: 100%;
-  height: 320vh;
+  height: 324vh;
   padding: 40px;
   overflow-x: hidden;
   display: flex;
 }
 
 .App {
-  width: 86%;
+  width: 87.2%;
   margin-left: auto;
   overflow-x: hidden;
   margin-right: auto;
